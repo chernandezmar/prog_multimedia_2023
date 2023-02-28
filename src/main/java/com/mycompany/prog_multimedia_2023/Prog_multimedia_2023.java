@@ -11,10 +11,9 @@ package com.mycompany.prog_multimedia_2023;
 public class Prog_multimedia_2023 {
 
     public static void main(String[] args) {
-        double valorUsd = 18.45;
-        int usd = 150;
+        int var = 35;
+        int resto = (var % 2);
         
-        double usdMxn = (usd * valorUsd);
         /* OPOERADORES ARITMETICOS
            + -> suma   
            - -> resta
@@ -22,6 +21,19 @@ public class Prog_multimedia_2023 {
            % -> mod o resto de la division
            * -> multiplicacion
         */
-        System.out.println("tenemos " + usd + " dolares, equivalente a " + usdMxn + " pesos");
+        if (resto == 0) {
+            /*
+            == -> exactamente igual
+            >= -> mayor o igual
+            >  -> mayor que
+            <= -> menor o igual
+            <  -> menor que
+            */
+            System.out.println("numero par");
+        }
+        else {
+            System.out.println("numero impar");
+        }
+        
     }
 }
