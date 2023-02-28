@@ -11,16 +11,17 @@ package com.mycompany.prog_multimedia_2023;
 public class Prog_multimedia_2023 {
 
     public static void main(String[] args) {
-        int numero1=20;
-        int numero2=30;
-        double decimal=10.4;
-        double res=(numero1 + numero2 + decimal);
+        double valorUsd = 18.45;
+        int usd = 150;
         
-        char letra='s';
-        String frase="hola mundo";
-        
-        /*la declaracion de la variable es:
-        tipo nombreVariable=valor;*/
-        System.out.println(frase + " resultado=" + res);
+        double usdMxn = (usd * valorUsd);
+        /* OPOERADORES ARITMETICOS
+           + -> suma   
+           - -> resta
+           / -> division
+           % -> mod o resto de la division
+           * -> multiplicacion
+        */
+        System.out.println("tenemos " + usd + " dolares, equivalente a " + usdMxn + " pesos");
     }
 }
