@@ -11,17 +11,8 @@ package com.mycompany.prog_multimedia_2023;
 public class Prog_multimedia_2023 {
 
     public static void main(String[] args) {
-        double valorUsd = 18.45;
-        int usd = 150;
-        
-        double usdMxn = (usd * valorUsd);
-        /* OPOERADORES ARITMETICOS
-           + -> suma   
-           - -> resta
-           / -> division
-           % -> mod o resto de la division
-           * -> multiplicacion
-        */
-        System.out.println("tenemos " + usd + " dolares, equivalente a " + usdMxn + " pesos");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("i vale=" + i);
+        }
     }
 }
