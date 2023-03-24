@@ -3,56 +3,60 @@
  */
 
 package com.mycompany.prog_multimedia_2023;
+import java.util.HashMap;
 import java.util.Scanner;
 
 
 public class Prog_multimedia_2023 {
-
+    
     public static void main(String[] args) {
- /*       
-- Pedira 10 numeros
-- Solo pueden ser 1 al 20
-- numMayor=0
-- numMenor=21
-- Suma=0
-- numLeido
-- contNumero=1
-        
-1.- Mostrar leyenda "Dame un numero:", numero que lea lo  guardare en una variable llamada numLeido
-1a.- Validamos que numLeido < 21, si: continua,no: regresar al paso 1
-2.- contNumero se incremente
-3.- numLeido > numMayor? si: numMayor=numLeido, no: continua
-4.- numLeido < numMenor? si: numMenor=numLeido, no: continua
-5.- suma=suma+numLeido
-6.- conNumero < 11? si: Imprime las variables, regresar al paso 1.*/
-
-
-        int contNumero = 1;
-        int numMayor = 0;
-        int numMenor = 21;
-        int suma = 0;
-        int numLeido;
-        Scanner sc = new Scanner(System.in);
-
-        
-        while (contNumero < 11) {
-            System.out.print("Dame un número: ");
-            numLeido = sc.nextInt();  
-            if ((numLeido < 20) && (numLeido > 0)){
-                contNumero++;
-                if (numLeido > numMayor) {
-                    numMayor = numLeido;
-                }
-                if (numLeido < numMenor) {
-                    numMenor = numLeido;
-                }
-                suma = suma + numLeido;                        
-            }  
-            else {
-                System.out.println("Error solo acepto numeros del 1 al 20");
-            }
+        System.out.println("----------------ARRAY------------------------");
+        int array[] = {1,2,3,4,5,6,7,8,9,10,100,34,56,78};
+        System.out.println(array[0] + " " + array[5]);
+        for(int i=0; i< array.length; i++) {
+            System.out.println(i + "->" + array[i]);
         }
-        System.out.println("mayor=" + numMayor +" menor="+ numMenor +" suma="+ suma);
+        System.out.println(array.length);
+        
+        
+        System.out.println("----------------ARRAY Palabras------------------------");
+        
+        String arrayS[] = {"hola", "mundo", "como", "estas"};
+        System.out.println(arrayS[0] + " " + arrayS[1]);
+        
+        
+        
+        System.out.println("----------------MATRIZ------------------------");
+        
+        int matriz[][] = { {1,2,3,4}, {5,6,7,8}, {9,10,11,12}};
+        /*
+        1  2  3  4
+        5  6  7  8
+        9  10 11 12
+             */
+        System.out.println(matriz[2][3]);
+        
+        for(int y=0; y< matriz.length; y++) {
+            for(int x=0; x<matriz[y].length; x++) {
+                System.out.print(matriz[y][x] + " ");            
+            }
+            System.out.print("\n");
+        }
+       
+        System.out.println(matriz.length);
+        
+        System.out.println("----------------HASH------------------------");
+        
+        HashMap<Integer, String> ProductoInfo = new HashMap<>();
+
+        ProductoInfo.put(1, "Zapatos de Cuero");
+        ProductoInfo.put(2, "Casacas Cortaviento");
+        ProductoInfo.put(3, "Zapatillas Running");
+        ProductoInfo.put(56, "Gorra");
+        
+        System.out.println(ProductoInfo);
+        
+        System.out.println(ProductoInfo.get(56));
         
         
     }
