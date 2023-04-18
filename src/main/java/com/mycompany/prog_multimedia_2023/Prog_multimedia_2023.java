@@ -10,7 +10,7 @@ public class Prog_multimedia_2023 {
        int resultado = 0;
        do {
             imprime_menu();
-            System.out.print("Ingrese la opcion deseada2: ");
+            System.out.print("Ingrese la opcion deseada: ");
             numero = sc.nextInt();  
             if (numero == 1 ) {
                 resultado=suma_numeros();
@@ -19,6 +19,12 @@ public class Prog_multimedia_2023 {
             if (numero == 2 ) {
                 fibonacci();
             } 
+            if (numero == 4) {
+                int a = 20;
+                int b = 57;
+                int res = multiplica_numeros(a, b);
+                System.out.println("el resultado de la operacion es:"+ res);
+            }
        } while (numero > 0);
        
        
@@ -32,6 +38,7 @@ public class Prog_multimedia_2023 {
         System.out.println( "1.- Suma de de numeros");
         System.out.println( "2.- Obtener Serie Fibonacci");
         System.out.println( "3.- Calcular Mayor, Menor, Avg de numeros");
+        System.out.println( "4.- multiplica 2 numeros");
         System.out.println( "*******************************************");
     }
     
@@ -72,6 +79,12 @@ public class Prog_multimedia_2023 {
             }
         }
         System.out.println(fibo.toString());
+    }
+    
+    public static int multiplica_numeros(int n1, int n2) {
+        int resultado=0;
+        resultado=n1*n2;
+        return resultado;
     }
     
 }
