@@ -7,31 +7,35 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 
+
 public class Prog_multimedia_2023 {
     public static void main(String[] args) {
-      String archivo = "C:\\prog_multimedia_2023\\prog_multimedia_2023\\calificaciones.txt";
-      double suma=0;
-      double promedio=0;
+      String archivo = "C:\\prog_multimedia_2023\\prog_multimedia_2023\\sismos2.csv";
+      Double SismoMayor=0.0;
+      String Datos = "";
+      
       try {
         BufferedReader lector = new BufferedReader(new FileReader(archivo));
-        for (int i=0; i<5; i++){
-            suma=0;
-            String linea[] = lector.readLine().split(",");
-            System.out.println(linea[0] + "***********************");
-            for (int x=1; x<=3; x++) {
-                String valor = linea[x];
-                suma += Double.parseDouble(valor);
-                System.out.print(valor + " " );
+        for (int i=0; i<274643; i++) {
+            String linea = lector.readLine();
+            if (linea.contains("no calculable")) {
+                //System.out.println("nop");
+            } else {
+                String ArrayLinea[] = linea.split(",");
+                String valor = ArrayLinea[2];
+                //System.out.println(i + " " + ArrayLinea[2]);
+                Double magnitud =  Double.parseDouble(valor);
+                if (SismoMayor < magnitud) {
+                    SismoMayor=magnitud;
+                    Datos = linea;
+                }
             }
-            promedio = suma/3;
-            System.out.println(","+ String.format("%.1f", promedio));
+            
         }
-        lector.close();
       } catch (IOException e) {
-          System.out.println("Error al leer el archivo" + archivo );
-      }
+        System.out.println("Error al leer el archivo" + archivo );
+        }
       
-   
+      System.out.println("El Mayor Sismo fue:" + Datos );
     }
-
 }
